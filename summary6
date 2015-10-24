@@ -1,0 +1,163 @@
+
+** packtpub.com
+** w3schools.com
+** bookbyte.com
+** POC
+
+** cs2015
+	** loancalc 
+	** pos
+
+======================================
+
+** Project bases = basic Point Of Sale
+
+Today
+======================================
+-- indeed.com 
+   == data center, vs, .net
+   == sql and c#, github, certify
+======================================
+
+    POS c# console
+
+       Solution: sol_pos102415
+       Name:     pos102415_1       
+
+    ** write to text / read 
+    ** VS2013 - localdb
+    ** Intro to Database - ADO.NET 
+
+-- enity frame work, EF 
+    ** 
+    ** linq -- generates sql
+    ** linqpad
+    ** nosql = mongodb
+
+
+Last Week
+======================
+* Week 6  , chap 1-6
+  -- Method, params, out, ref
+  -- error handline
+  -- Data Structures, loop, decisions
+  -- Arrays, Collection, Generics
+  -- conversion, error handling
+  -- file system, read/write to file
+
+* Week 6 -- char 1-10
+  -- Intro to Database - ADO.NET 
+  -- Classes, Interface
+  -- Dynamic link library - Windows dll
+  -- Windows Application
+
+********
+
+  -- enity frame work, EF (linq,       
+
+nhibernate)
+  -- NOSQL, no stored procedures
+  -- in-memory data, reading
+
+
+===================
+POS system 
+===================
+
+     input
+      * user name, email
+      * items[] = array
+         -- how to retrive items
+         -- how may items? 2 items
+
+     output
+      * user name, email 
+      * Sale Date
+      * item summary
+      * total, tax, subtotal, grand total
+
+     extra:
+      * log sale to file
+      * query sales
+ 
+Buld P.O.S project
+====================
+
+* solution name: sol_pos_console2
+* name: pos_console_unit1
+* folder: c:\cs_dev_2015
+* [x] create directory for solution
+* .Net Framwork 4.5
+
+
+=============================
+** how is .net farmemework or (java)
+   utilized during compile time    
+
+(developing)
+   and run-time (use program)?
+
+** programs
+
+   ** console.exe (process)
+   ** asp.net ==  (iis.exe) / 
+ 		  (client browser.exe)
+
+=============================
+
+development - compile
+  ** .net compiler
+     creates files/header info
+     package with .net libraries
+
+example: docx == calls word
+	console.exe == call .net libraries
+
+        namespace example1
+        { class prog1{} }
+
+   conole.exe
+   windows1.exe
+
+  // java
+        package example1;
+        class prog1{}
+
+  c:\example1\prog1.class
+
+  java.exe prog1.class
+
+
+===========================
+Web
+===========================
+computer: 129.37.23
+
+c:\www\website1
+  index.html  
+  \bin
+   website1.dll  (.net)
+
+browser.exe --> 
+http://129.37.23/website1\index.html
+
+** get data / business logic
+   c# -- data access
+
+=========================
+Conole.exe
+----------------------
+
+using System; //c:\...net\4.5\system.dll
+
+Conole.WriteLine("print");
+
+
+=====================
+#define = c# equivilent
+
+***** 30 min break *********
+
+@@ email code to students
+
+
