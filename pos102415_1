@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,116 @@ namespace pos102415_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("P.O.S 1.0");
+            const int _MAX = 3;
+            var _name = string.Empty; //fixed to string type, save code
+            var _email = string.Empty;
+            var _items = new string[_MAX];
+            var _prices = new List<string>(); //generic collection = fixed to string
+            var dprice = 0.0d; //default type
+
+            try
+            {
+                //TODO: get name, email, items, prices
+                Console.Write("name:");
+                _name = Console.ReadLine();
+
+                Console.Write("email:");
+                _email = Console.ReadLine();
+
+                for (var i = 0; i <= _MAX - 1; i++)
+                {
+                    Console.Write("item: {0}", i);
+                    _items[i] = Console.ReadLine();
+
+                    Console.Write("price: {0}", i);
+                    _prices.Add(Console.ReadLine());   
+
+                  //** log to console
+                  //Console.WriteLine("** log item: {0}, price: {1}",_items[i],
+                  //      _prices[i]);
+                }
+
+                //TODO: print info ** foreach, do loop
+                DisplayInfo(_name, _email, _items, _prices);
+
+                //TODO: log to db
+                LogInfo(_name, _email, _items, _prices);
+
+                //TODO: display log
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("err: {0}", ex.Message);
+            }
+            finally
+            {
+
+            }
+
+            Console.ReadLine(); //pause
+        }
+
+        private static void LogInfo(string _name, string _email, string[] _items, List<string> _prices)
+        {
+            try
+            {
+                using (var _logfile = new StreamWriter(@"c:\pos.txt",true)) //log of heap memory
+                {
+                    _logfile.WriteLine("{0}", new string('*', 50));
+                    _logfile.WriteLine("{0}", "* POS 1.0");
+                    _logfile.WriteLine("{0}", new string('*', 50));
+
+                    _logfile.WriteLine("\ndate: {0}", DateTime.Now);
+                    _logfile.WriteLine("name: \t{0}, \temail: {1}", _name, _email);
+
+                    var i = 0;
+                    foreach (var item in _items)
+                    {
+                        _logfile.WriteLine("item: {0}, price: {1}", item,
+                            _prices[i]);
+                        i++;
+                    }
+                }
+
+                Console.WriteLine("* log created");
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private static void DisplayInfo(string _name, string _email, 
+            string[] _items, List<string> _prices)
+        {
+            try
+            {
+                Console.WriteLine("{0}", new string('*',50));
+                Console.WriteLine("{0}", "* POS 1.0");
+                Console.WriteLine("{0}", new string('*', 50));
+
+                Console.WriteLine("\ndate: {0}", DateTime.Now); 
+                Console.WriteLine("name: \t{0}, \temail: {1}", _name, _email); 
+
+                //foreach == less code to display array
+                var i = 0;
+                foreach (var item in _items)
+                {
+                    Console.WriteLine("item: {0}, price: {1}", item, 
+                        _prices[i]);
+                    i++;
+                }
+                
+                //solution1: multi-dimentional array = item, price
+                //solution2: generic hasttable
+                //** store index and two columns, i, item, price
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
