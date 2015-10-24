@@ -1,0 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pos102415_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("P.O.S 1.0");
+        }
+    }
+}
