@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pos102415_readinfo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                ReadFromPosTextFile();
+                ReadFromPosDb(); //ado.net
+                ReadFromPosDbLinq(); //doc to create ef
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private static void ReadFromPosDbLinq()
+        {
+        }
+
+        private static void ReadFromPosDb()
+        {
+        }
+
+        private static void ReadFromPosTextFile()
+        {
+        }
+    }
+}
